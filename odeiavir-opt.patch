@@ -1,0 +1,11 @@
+--- odeiavir-0.5.0pre5/Makefile.orig	Mon Feb 25 18:29:36 2002
++++ odeiavir-0.5.0pre5/Makefile	Thu Apr 17 15:38:47 2003
+@@ -4,7 +4,7 @@
+ EXEC_SENDMAIL=/usr/lib/sendmail
+ VERSION=0.4.99.5
+ CC=gcc
+-CFLAGS=-Wall -O2 -DPROGVERSION="\"${VERSION}\"" -DSYSCONFDIR="\"${SYSCONFDIR}\"" -DLOCATION="\"${LOCATION}\"" -DEXEC_RIPMIME="\"${EXEC_RIPMIME}\"" -DEXEC_SENDMAIL="\"${EXEC_SENDMAIL}\""
++CFLAGS=-Wall $(OPT) -DPROGVERSION="\"${VERSION}\"" -DSYSCONFDIR="\"${SYSCONFDIR}\"" -DLOCATION="\"${LOCATION}\"" -DEXEC_RIPMIME="\"${EXEC_RIPMIME}\"" -DEXEC_SENDMAIL="\"${EXEC_SENDMAIL}\""
+ LDFLAGS=-Wall -lpopt
+ 
+ all: odeiavir odeiavir.8
