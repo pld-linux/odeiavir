@@ -1,5 +1,5 @@
-Summary:	This is OdeiaVir, a program that, well, hates viruses.
-Summary(pl):	To OdeiaVir, program, ktory nienawidzi wirusow.
+Summary:	This is OdeiaVir, a program that, well, hates viruses
+Summary(pl):	OdeiaVir - program, który nienawidzi wirusów
 Name:		odeiavir
 Version:	0.5.0pre5
 Release:	0
@@ -7,17 +7,8 @@ License:	GPL
 Group:		Applications/Mail
 Vendor:		Juan Carlos Castro y Castro <jcastro@vialink.com.br>
 Source0:	http://virus.isverybad.org/%{name}-%{version}.tar.gz
-#Patch0:		%{name}-what.patch
-URL:		http://virus.isverybad.org
-#BuildRequires:	-
-#PreReq:		-
+URL:		http://virus.isverybad.org/
 Requires:	qmail
-#Requires(pre,post):	-
-#Requires(preun):	-
-#Requires(postun):	-
-#Provides:	-
-#Obsoletes:	-
-#Conflicts:	-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,12 +20,16 @@ virus-proof ezmlm lists, too, with ease. Sendmail users will have to
 change the Mlocal line in sendmail.cf.
 
 %description -l pl
-
-Kolejny frontend...
+OdeiaVir jest pomy¶lany tak, by byæ umieszczony na etapie lokalnego
+dostarczania wiadomo¶ci e-mail. Aktualnie dzia³a wiarygodnie tylko z
+qmailem, ale jest pocz±tkowa (pre-alpha, ekstremalnie nie testowana)
+obs³uga sendmaila. Program mo¿e byæ wywo³any z pliku .qmail
+u¿ytkownika. Oznacza to, ¿e mo¿na ³atwo zabezpieczyæ przed wirusami
+listy mailowe ezmlm. U¿ytkownicy sendmaila bêd± musieli zmieniæ
+liniê Mlocal w pliku sendmail.cf.
 
 %prep
-%setup -q -n %{name}-%{version}
-#%patch0 -p1
+%setup -q
 
 %build
 %{__make}
@@ -50,17 +45,9 @@ install config warning.txt $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%pre
-
-%post
-
-%preun
-
-%postun
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO scripts *.txt FAQ
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man8/*
-%{_sysconfdir}/*
+%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
