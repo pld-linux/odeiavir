@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Mail
 Vendor:		Juan Carlos Castro y Castro <jcastro@vialink.com.br>
 Source0:	http://virus.isverybad.org/%{name}-%{version}.tar.gz
+# Source0-md5:	843f88d43c03352e71278d928fc9a2f0
 Patch0:		%{name}-opt.patch
 URL:		http://virus.isverybad.org/
 Requires:	qmail
