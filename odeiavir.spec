@@ -27,8 +27,8 @@ dostarczania wiadomo¶ci e-mail. Aktualnie dzia³a wiarygodnie tylko z
 qmailem, ale jest pocz±tkowa (pre-alpha, ekstremalnie nie testowana)
 obs³uga sendmaila. Program mo¿e byæ wywo³any z pliku .qmail
 u¿ytkownika. Oznacza to, ¿e mo¿na ³atwo zabezpieczyæ przed wirusami
-listy mailowe ezmlm. U¿ytkownicy sendmaila bêd± musieli zmieniæ
-liniê Mlocal w pliku sendmail.cf.
+listy mailowe ezmlm. U¿ytkownicy sendmaila bêd± musieli zmieniæ liniê
+Mlocal w pliku sendmail.cf.
 
 %prep
 %setup -q
@@ -55,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README TODO scripts *.txt FAQ
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man8/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
