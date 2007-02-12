@@ -1,5 +1,5 @@
 Summary:	This is OdeiaVir, a program that, well, hates viruses
-Summary(pl):	OdeiaVir - program, który nienawidzi wirusów
+Summary(pl.UTF-8):   OdeiaVir - program, ktÃ³ry nienawidzi wirusÃ³w
 Name:		odeiavir
 Version:	0.5.0pre5
 Release:	0
@@ -21,13 +21,13 @@ support. You call it from the user's .qmail file. This means you can
 virus-proof ezmlm lists, too, with ease. Sendmail users will have to
 change the Mlocal line in sendmail.cf.
 
-%description -l pl
-OdeiaVir jest pomy¶lany tak, by byæ umieszczony na etapie lokalnego
-dostarczania wiadomo¶ci e-mail. Aktualnie dzia³a wiarygodnie tylko z
-qmailem, ale jest pocz±tkowa (pre-alpha, ekstremalnie nie testowana)
-obs³uga sendmaila. Program mo¿e byæ wywo³any z pliku .qmail
-u¿ytkownika. Oznacza to, ¿e mo¿na ³atwo zabezpieczyæ przed wirusami
-listy mailowe ezmlm. U¿ytkownicy sendmaila bêd± musieli zmieniæ liniê
+%description -l pl.UTF-8
+OdeiaVir jest pomyÅ›lany tak, by byÄ‡ umieszczony na etapie lokalnego
+dostarczania wiadomoÅ›ci e-mail. Aktualnie dziaÅ‚a wiarygodnie tylko z
+qmailem, ale jest poczÄ…tkowa (pre-alpha, ekstremalnie nie testowana)
+obsÅ‚uga sendmaila. Program moÅ¼e byÄ‡ wywoÅ‚any z pliku .qmail
+uÅ¼ytkownika. Oznacza to, Å¼e moÅ¼na Å‚atwo zabezpieczyÄ‡ przed wirusami
+listy mailowe ezmlm. UÅ¼ytkownicy sendmaila bÄ™dÄ… musieli zmieniÄ‡ liniÄ™
 Mlocal w pliku sendmail.cf.
 
 %prep
