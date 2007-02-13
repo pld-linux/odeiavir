@@ -1,5 +1,5 @@
 Summary:	This is OdeiaVir, a program that, well, hates viruses
-Summary(pl.UTF-8):   OdeiaVir - program, który nienawidzi wirusów
+Summary(pl.UTF-8):	OdeiaVir - program, który nienawidzi wirusów
 Name:		odeiavir
 Version:	0.5.0pre5
 Release:	0
